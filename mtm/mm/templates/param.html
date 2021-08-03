@@ -18,7 +18,7 @@
   <tr>
     <td>{{ work.work_type }}</td>
 	
-    <td>{% for param in params %}{{ param.control_stage }}{% endfor %}</td>
+    <td>{% for param in work.control_stage.all %}{{ param }}{% endfor %}</td>
 	
     <td>{% for param in params %}{{ param.scope_of_control }}{% endfor %}</td>
 	  <td>{% for param in params %}{{ param.control_method }}{% endfor %}</td>
