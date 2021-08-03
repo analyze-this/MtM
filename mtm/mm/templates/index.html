@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ title }}</title>
+</head>
+<body>
+<h1 style='width:80%; text-align: center'>Table</h1>
+
+<table style="width:80%">
+  <tr>
+	 
+    <th style="text-align: center; font-size: 1.6em;">Work type</th>
+   
+  </tr>
+	{% for work_type in work_types %}
+  <tr>
+	 
+    <td style='text-align: center; font-size: 1.6em;'><a href='/worktype/{{ work_type.id }}'>{{ work_type.work_type }}</a></td>
+	 
+  </tr>
+	
+	{% endfor %}
+</table>
+
+</body>
+</html>

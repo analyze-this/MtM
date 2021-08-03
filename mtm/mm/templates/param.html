@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ title }}</title>
+</head>
+<body>
+<h1 style='text-align: center'>Table</h1>
+<table style="width:100%; font-size: 1.6em;">
+  <tr>
+    <th>Work type</th>
+    <th>Control stage</th>
+    <th>Scope of control</th>
+	  <th>Control method</th>
+  </tr>
+	{% for work in works %}
+	
+  <tr>
+    <td>{{ work.work_type }}</td>
+	
+    <td>{% for param in params %}{{ param.control_stage }}{% endfor %}</td>
+	
+    <td>{% for param in params %}{{ param.scope_of_control }}{% endfor %}</td>
+	  <td>{% for param in params %}{{ param.control_method }}{% endfor %}</td>
+  </tr>
+	
+	{% endfor %}
+</table>
+</body>
+</html>

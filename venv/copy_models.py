@@ -77,13 +77,13 @@ class ControlMethod(models.Model):
 
 class ControlTypes(models.Model):
 	work_type = models.ForeignKey('WorkTypes', on_delete=models.CASCADE)
-	order = models.PositiveIntegerField(verbose_name="Номер по порядку")
+	number = models.PositiveIntegerField(verbose_name="Номер по порядку")
 	control_stage = models.ForeignKey("ControlStage", on_delete=models.CASCADE)
 	scope_of_control = models.ForeignKey("ScopeOfControl", on_delete=models.CASCADE)
 	control_method = models.ForeignKey("ControlMethod", on_delete=models.CASCADE)
 
 	def __str__(self):
-		return "Order of parameters"
+		return "Controlled parameter"
 
 	class Meta:
 		verbose_name = 'Номер по порядку'

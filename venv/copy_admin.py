@@ -20,7 +20,7 @@ class WorkGroupsAdmin(admin.ModelAdmin):
 
 
 class WorkTypesAdmin(admin.ModelAdmin):
-	list_display = ('id', 'work_type', 'work_group')
+	list_display = ('id', 'work_type', 'work_group', )
 	list_display_links = ('id', 'work_type', )
 
 
@@ -40,8 +40,8 @@ class ControlMethodAdmin(admin.ModelAdmin):
 
 
 class ControlTypesAdmin(admin.ModelAdmin):
-	list_display = ('id', 'order', 'work_type', 'control_stage', 'scope_of_control', 'control_method')
-	list_display_links = ('id', 'order', )
+	list_display = ('id', 'number', 'control_stage', 'scope_of_control', 'control_method')
+	list_display_links = ('id', 'number', )
 
 
 admin.site.register(WorkGroups, WorkGroupsAdmin)
